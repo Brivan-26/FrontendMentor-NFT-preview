@@ -1,0 +1,132 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dar-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 18px;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--very-dark-blue-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+}
+img:hover {
+  cursor: pointer;
+}
+.container {
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  background: var(--very-dar-blue-card);
+}
+.container__header {
+  position: relative;
+}
+.container__header div {
+  position: absolute;
+  background: hsl(178, 100%, 50%, 40%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+}
+.container__header div:hover {
+  opacity: 1;
+}
+.container__header > img {
+  border-radius: 20px;
+}
+.container__header > img:hover {
+  border-radius: 0px;
+}
+.container h1 {
+  color: var(--white);
+  margin: 20px 0;
+}
+.container > p {
+  color: var(--soft-blue);
+  margin-bottom: 20px;
+}
+.container__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--soft-blue);
+}
+.infos__price,
+.infos__time {
+  display: flex;
+  align-items: center;
+}
+.infos__price img,
+.infos__time img {
+  margin-right: 5px;
+}
+.infos__price > p {
+  color: var(--cyan);
+}
+.infos__time > p {
+  color: var(--soft-blue);
+}
+.container__profile {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+.container__profile > img {
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  margin-right: 20px;
+}
+.container__profile h4 {
+  color: var(--white);
+  font-weight: 400;
+}
+.container__profile h4 span {
+  color: var(--soft-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--cyan);
+}
+.container h1,
+.container__profile h4 {
+  cursor: pointer;
+}
+.container h1:hover,
+.container__profile h4:hover {
+  color: var(--cyan);
+}
+@media screen and (min-width: 500px) {
+  .container {
+    width: 350px;
+  }
+}
